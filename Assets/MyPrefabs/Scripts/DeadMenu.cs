@@ -16,7 +16,7 @@ public class DeadMenu : MonoBehaviour
         SceneTrancisional.OnFade += ActivateMenu;
 
         Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+        Cursor.visible = false;
         m_Exit.gameObject.SetActive(false);
         m_Restart.gameObject.SetActive(false);
         m_Text.gameObject.SetActive(false);
@@ -46,7 +46,7 @@ public class DeadMenu : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         Cursor.lockState = CursorLockMode.None;
-        //Cursor.visible = true;
+        Cursor.visible = true;
         m_Exit.gameObject.SetActive(true);
         m_Restart.gameObject.SetActive(true);
         m_Text.gameObject.SetActive(true);

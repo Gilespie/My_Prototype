@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df56152ca9bb45143a3caa63fb2a1d44, type: 3}
+  m_Name: New Voice List
+  m_EditorClassIdentifier: 
+  Robot_Start: {fileID: 8300000, guid: 899fae5f742557d4e8b663fc0469ff71, type: 3}
+  Robot_Amazing: {fileID: 8300000, guid: 2c75364cef99f95449c7a6eae6c90724, type: 3}
+  Robot_Dead: {fileID: 8300000, guid: 2d8f3632b0c9a5d408a8f8131d7c0214, type: 3}
+  Robot_Stress: {fileID: 8300000, guid: 2b9d04ea4a6487c498c714c36df4c914, type: 3}
+  Robot_High: {fileID: 8300000, guid: d0cf9cd3c608b2b46b6185e5cb560c5e, type: 3}
+  Robot_Water: {fileID: 8300000, guid: c03e969f7a2b9f0489148b3b97d714b8, type: 3}
+  Robot_Bridge: {fileID: 8300000, guid: db2df617affa72946a1d1e6245980f46, type: 3}
+  Robot_Timer: {fileID: 8300000, guid: 73767b1c1b6415d4c9d4f77ab07f9b63, type: 3}

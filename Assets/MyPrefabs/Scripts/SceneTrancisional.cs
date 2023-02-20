@@ -8,11 +8,13 @@ public class SceneTrancisional : MonoBehaviour
     public static event UnityAction OnFade;
 
     [SerializeField] private Animator m_Animator;
+    [SerializeField] private Trigger m_TriggerEnd;
     [SerializeField] private bool IsActive;
 
     void Start()
     {
         Health.OnDeadly += FadeIn;
+        m_TriggerEnd.OnEvent += FadeEnd;
 
         if(IsActive)
         {
@@ -23,6 +25,7 @@ public class SceneTrancisional : MonoBehaviour
     private void OnDisable()
     {
         Health.OnDeadly -= FadeIn;
+        m_TriggerEnd.OnEvent -= FadeEnd;
     }
 
     private void FadeIn()
@@ -39,11 +42,12 @@ public class SceneTrancisional : MonoBehaviour
     IEnumerator Transition()
     {
         yield return new WaitForSeconds(3);
-        
+        SceneManager.LoadScene("MainMenu");
     }
 
-    //private void FadeIn()
-    //{
-    //    m_Animator.SetBool("FadeIn", true);
-    //}
+    private void FadeEnd()
+    {
+        m_Animator.SetBool("FadeIn", true);
+        StartCoroutine(Transition());
+    }
 }

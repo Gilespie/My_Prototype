@@ -7,10 +7,13 @@ public class Health : MonoBehaviour
 
     private float m_Health = 100f;
     private float currentHealth;
+    private AudioSource deadVoice;
+    public VoiceList list;
     //private float m_DamageFall = 30f;
 
     private void Start()
     {
+        deadVoice = GetComponent<AudioSource>();
         currentHealth = m_Health;
     }
 
@@ -21,6 +24,7 @@ public class Health : MonoBehaviour
         if(currentHealth <= 0)
         {
             currentHealth = 0;
+            deadVoice.PlayOneShot(list.Robot_Dead);
             OnDeadly?.Invoke();
         }
     }

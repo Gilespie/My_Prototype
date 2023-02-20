@@ -20,10 +20,6 @@ public class PauseMenu : MonoBehaviour
         {
             ActivateMenu();
         }
-        else
-        {
-            DeactivateMenu();
-        }
     }
 
     public void ReturnToMainMenu()
@@ -33,6 +29,8 @@ public class PauseMenu : MonoBehaviour
 
     public void ActivateMenu()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         m_ResumeButton.gameObject.SetActive(true);
         m_ExitButton.gameObject.SetActive(true);
         m_PauseText.gameObject.SetActive(true);
@@ -40,6 +38,8 @@ public class PauseMenu : MonoBehaviour
 
     public void DeactivateMenu()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         m_ResumeButton.gameObject.SetActive(false);
         m_ExitButton.gameObject.SetActive(false);
         m_PauseText.gameObject.SetActive(false);
